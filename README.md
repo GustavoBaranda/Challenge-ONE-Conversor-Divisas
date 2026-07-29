@@ -1,9 +1,12 @@
 # 💱 Conversor de Divisas y Temperaturas - Challenge Java (Oracle ONE / Alura Latam)
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
-![Oracle ONE](https://img.shields.io/badge/Oracle_ONE-F80000?style=for-the-badge&logo=oracle&logoColor=white)
-![Alura Latam](https://img.shields.io/badge/Alura_Latam-007ACC?style=for-the-badge&logo=vlc&logoColor=white)
-![Status](https://img.shields.io/badge/Estado-Completado-success?style=for-the-badge)
+<p>
+  <img align="left" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java" />
+  <img align="left" src="https://img.shields.io/badge/Oracle_ONE-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle ONE" />
+  <img align="left" src="https://img.shields.io/badge/Alura_Latam-007ACC?style=for-the-badge&logo=vlc&logoColor=white" alt="Alura Latam" />
+  <img align="left" src="https://img.shields.io/badge/Estado-Completado-success?style=for-the-badge" alt="Estado: Completado" />
+</p>
+<br clear="all">
 
 ¡Bienvenido al **Conversor de Divisas y Temperaturas**! Este proyecto fue desarrollado como parte del **Challenge de Java** del programa **Oracle Next Education (ONE)** en colaboración con **Alura Latam**. 
 
@@ -43,11 +46,34 @@ Soporta las 3 escalas térmicas más utilizadas a nivel global con conversión e
 
 ## 🛠️ Tecnologías Utilizadas
 
-- **Lenguaje**: Java (JDK 8 o superior)
-- **Interfaz Gráfica**: Java Swing (`JOptionPane`, `ImageIcon`, `Icon`)
-- **Manejo de Formato**: `java.text.DecimalFormat`
-- **Paradigma**: Programación Orientada a Objetos (POO) & Manejo de Excepciones
-- **IDE Recomendada**: Visual Studio Code / Eclipse / IntelliJ IDEA
+### ☕ Lenguaje
+<p>
+  <img align="left" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
+</p>
+<br clear="all">
+
+### 🖥️ Interfaz Gráfica
+<p>
+  <img align="left" src="https://img.shields.io/badge/Java_Swing-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java Swing" />
+  <img align="left" src="https://img.shields.io/badge/JOptionPane-007396?style=for-the-badge&logo=openjdk&logoColor=white" alt="JOptionPane" />
+</p>
+<br clear="all">
+
+### 📐 Paradigma & Prácticas
+<p>
+  <img align="left" src="https://img.shields.io/badge/POO-0052CC?style=for-the-badge&logo=java&logoColor=white" alt="Programación Orientada a Objetos" />
+  <img align="left" src="https://img.shields.io/badge/Manejo_de_Excepciones-DC143C?style=for-the-badge&logo=java&logoColor=white" alt="Manejo de Excepciones" />
+  <img align="left" src="https://img.shields.io/badge/DecimalFormat-5C5C5C?style=for-the-badge&logo=java&logoColor=white" alt="DecimalFormat" />
+</p>
+<br clear="all">
+
+### 🛠️ IDEs Recomendadas
+<p>
+  <img align="left" src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Code" />
+  <img align="left" src="https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white" alt="IntelliJ IDEA" />
+  <img align="left" src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipseide&logoColor=white" alt="Eclipse" />
+</p>
+<br clear="all">
 
 ---
 
