@@ -1,18 +1,120 @@
-## Getting Started
+# 💱 Conversor de Divisas y Temperaturas - Challenge Java (Oracle ONE / Alura Latam)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![Oracle ONE](https://img.shields.io/badge/Oracle_ONE-F80000?style=for-the-badge&logo=oracle&logoColor=white)
+![Alura Latam](https://img.shields.io/badge/Alura_Latam-007ACC?style=for-the-badge&logo=vlc&logoColor=white)
+![Status](https://img.shields.io/badge/Estado-Completado-success?style=for-the-badge)
 
-## Folder Structure
+¡Bienvenido al **Conversor de Divisas y Temperaturas**! Este proyecto fue desarrollado como parte del **Challenge de Java** del programa **Oracle Next Education (ONE)** en colaboración con **Alura Latam**. 
 
-The workspace contains two folders by default, where:
+Se trata de una aplicación de escritorio desarrollada en **Java** con interfaz gráfica interactiva (**Java Swing** via `JOptionPane`), que permite realizar conversiones precisas entre múltiples divisas internacionales y escalas de temperatura, garantizando una experiencia visual amigable y un control de errores riguroso.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+---
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## 🚀 Características Principales
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+### 💵 1. Conversor de Divisas
+Permite convertir de forma bidireccional entre la moneda local (Pesos) y las principales divisas del mundo:
+- **Pesos** ↔️ **Dólares (USD)**
+- **Pesos** ↔️ **Euros (EUR)**
+- **Pesos** ↔️ **Libras Esterlinas (GBP)**
+- **Pesos** ↔️ **Yen Japonés (JPY)**
+- **Pesos** ↔️ **Won Surcoreano (KRW)**
 
-## Dependency Management
+*Formateo preciso a dos decimales (`DecimalFormat`) y cálculo bidireccional automático.*
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### 🌡️ 2. Conversor de Temperaturas
+Soporta las 3 escalas térmicas más utilizadas a nivel global con conversión en ambos sentidos:
+- **Celsius (°C)** ↔️ **Fahrenheit (°F)**
+- **Celsius (°C)** ↔️ **Kelvin (K)**
+- **Fahrenheit (°F)** ↔️ **Kelvin (K)**
+
+### 🛡️ 3. Validación y Control de Errores
+- **Excepción Personalizada (`NegativeNumberException`)**: Impide el ingreso de montos o valores menores o iguales a cero en el conversor de divisas.
+- **Validación de Entradas Vacías**: Detecta cuando el usuario no ingresa ningún valor o presiona aceptar sin completar el campo.
+- **Manejo de Errores de Formato (`NumberFormatException`)**: Captura caracteres alfabéticos o símbolos no numéricos informando adecuadamente al usuario.
+
+### 🎨 4. Interfaz Gráfica Personalizada (GUI)
+- Construido con cuadros de diálogo modales e intuitivos mediante `javax.swing.JOptionPane`.
+- **Iconografía adaptada**: Incorpora imágenes e íconos personalizados (`doubt`, `foreignExchange`, `conversion`, `amount`, `error`, `thanks`) para enriquecer la experiencia visual.
+- **Ciclo Interactivo**: Permite realizar múltiples operaciones consecutivas mediante diálogos de confirmación (`YES_NO_OPTION`).
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Lenguaje**: Java (JDK 8 o superior)
+- **Interfaz Gráfica**: Java Swing (`JOptionPane`, `ImageIcon`, `Icon`)
+- **Manejo de Formato**: `java.text.DecimalFormat`
+- **Paradigma**: Programación Orientada a Objetos (POO) & Manejo de Excepciones
+- **IDE Recomendada**: Visual Studio Code / Eclipse / IntelliJ IDEA
+
+---
+
+## 📁 Estructura del Proyecto
+
+```text
+Conversor de divisas/
+│
+├── bin/                          # Archivos compilados (.class)
+├── src/                          # Código fuente del proyecto
+│   ├── App.java                  # Clase principal con menú y lógica de conversión
+│   ├── NegativeNumberException.java # Excepción custom para validación de montos
+│   └── img/                      # Recursos de imagen/íconos para la GUI
+│       ├── amount.png            # Ícono para ingreso de montos
+│       ├── conversion.png        # Ícono para resultado de conversión
+│       ├── doubt.png             # Ícono para selección inicial
+│       ├── error.png             # Ícono para mensajes de error
+│       ├── foreignExchange.png   # Ícono para selección de divisas
+│       └── thanks.png            # Ícono de despedida/agradecimiento
+│
+└── README.md                     # Documentación del proyecto
+```
+
+---
+
+## 💻 Requisitos e Instalación
+
+### Prerrequisitos
+- Tener instalado **Java Development Kit (JDK 8)** o superior.
+- (Opcional) Un IDE de desarrollo Java (VS Code, IntelliJ IDEA, Eclipse, etc.).
+
+### Ejecución desde la Terminal
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/GustavoBaranda/Challenge-Oracle-ONE.git
+   cd "Conversor de divisas"
+   ```
+
+2. **Compilar el proyecto:**
+   ```bash
+   javac -d bin src/*.java
+   ```
+
+3. **Ejecutar la aplicación:**
+   ```bash
+   java -cp bin App
+   ```
+
+---
+
+## 📐 Lógica de Negocio y Fórmulas
+
+### Conversor de Temperaturas
+Las fórmulas empleadas para las conversiones entre escalas térmicas son:
+- **Celsius a Fahrenheit**: $T_{°F} = \left(T_{°C} \times \frac{9}{5}\right) + 32$
+- **Fahrenheit a Celsius**: $T_{°C} = (T_{°F} - 32) \times \frac{5}{9}$
+- **Celsius a Kelvin**: $T_{K} = T_{°C} + 273.15$
+- **Kelvin a Celsius**: $T_{°C} = T_{K} - 273.15$
+- **Fahrenheit a Kelvin**: $T_{K} = (T_{°F} - 32) \times \frac{5}{9} + 273.15$
+- **Kelvin a Fahrenheit**: $T_{°F} = (T_{K} - 273.15) \times \frac{9}{5} + 32$
+
+---
+
+## 🌟 Reconocimientos y Créditos
+
+Este proyecto fue realizado como entrega del desafío de Java dentro de la especialización de **Backend** de **Oracle Next Education (ONE)** en conjunto con **Alura Latam**.
+
+- **Desarrollador**: [Gustavo Baranda](https://github.com/GustavoBaranda)
+- **Programa**: Oracle Next Education (ONE) / Alura Latam
